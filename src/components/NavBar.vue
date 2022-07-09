@@ -9,10 +9,10 @@
 
       <b-navbar-nav class="ml-auto">
         <li class="nav-item">
-          <router-link to="/" class="nav-link">Home</router-link>
+          <router-link to="/" class="nav-link">Inicio</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/about" class="nav-link">About</router-link>
+          <router-link to="/payments" class="nav-link">Pagos</router-link>
         </li>
       </b-navbar-nav>
     </b-collapse>
