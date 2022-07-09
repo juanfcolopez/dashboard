@@ -17,6 +17,9 @@
         <li class="nav-item">
           <router-link to="/products" class="nav-link">Productos</router-link>
         </li>
+         <li class="nav-item">
+          <router-link to="/workers" class="nav-link">Trabajadores</router-link>
+        </li>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
