@@ -1,13 +1,15 @@
 <template>
-  <div v-if="this.loading">
-    Cargando...
-  </div>
-  <div v-else>
-    <h1>Métodos de pago</h1>
-    <Pie
-      :chart-options="chartOptions"
-      :chart-data="chartData"
-    />
+  <div>
+    <div v-if="this.loading">
+      Cargando...
+    </div>
+    <div v-else>
+      <h1>Medio de pago más común</h1>
+      <Pie
+        :chart-options="chartOptions"
+        :chart-data="chartData"
+      />
+    </div>
   </div>
 </template>
 
@@ -56,7 +58,7 @@ export default {
     }
   },
   async mounted () {
-    await fetch(`${process.env.VUE_APP_API_URL}/payments`)
+    await fetch(`${process.env.VUE_APP_API_URL}/payments/count`)
       .then((response) => response.json())
       .then((json) => {
         this.chartData.labels = [...json.data[0]]

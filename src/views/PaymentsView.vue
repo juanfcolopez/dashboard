@@ -1,23 +1,24 @@
 <template>
   <div class="home">
-    <AmountChart/>
+    <h1>Métodos de pago</h1>
+    <div>
+     <AmountChart/>
+    </div>
+    <div>
+      <CountChart/>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import AmountChart from '@/components/payments/CountPaymentsMethod.vue'
+import CountChart from '@/components/payments/CountPaymentsMethod.vue'
+import AmountChart from '@/components/payments/amountByPaymentMethod.vue'
 export default {
   name: 'PaymentsView',
   components: {
+    CountChart,
     AmountChart
   }
 }
 </script>
-<style scoped>
-  .container {
-    width: 80vw;
-    display: flex;
-    flex-wrap: wrap;
-  }
-</style>
