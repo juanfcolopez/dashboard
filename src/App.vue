@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-    <nav-bar/>
+    <NavBar/>
     <router-view/>
   </div>
 </template>
+<script>
+// @ is an alias to /src
+import NavBar from './components/Navbar'
+export default {
+  components: {
+    NavBar
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
