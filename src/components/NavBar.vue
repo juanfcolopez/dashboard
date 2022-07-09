@@ -14,6 +14,9 @@
         <li class="nav-item">
           <router-link to="/payments" class="nav-link">Pagos</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/products" class="nav-link">Productos</router-link>
+        </li>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
