@@ -20,6 +20,9 @@
          <li class="nav-item">
           <router-link to="/workers" class="nav-link">Trabajadores</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/sells" class="nav-link">Ventas</router-link>
+        </li>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
