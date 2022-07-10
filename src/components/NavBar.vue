@@ -9,7 +9,7 @@
 
       <b-navbar-nav class="ml-auto">
         <li class="nav-item">
-          <router-link to="/" class="nav-link">Home</router-link>
+          <router-link to="/" class="nav-link">Ventas</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/payments" class="nav-link">Pagos</router-link>
@@ -19,9 +19,6 @@
         </li>
          <li class="nav-item">
           <router-link to="/workers" class="nav-link">Trabajadores</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/sells" class="nav-link">Ventas</router-link>
         </li>
         <li class="nav-item">
           <router-link to="/tables" class="nav-link">Mesas</router-link>

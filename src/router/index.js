@@ -1,14 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'sells',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SellByDateView.vue')
   },
   {
     path: '/payments',
@@ -24,11 +23,6 @@ const routes = [
     path: '/workers',
     name: 'workers',
     component: () => import(/* webpackChunkName: "about" */ '../views/WorkersView.vue')
-  },
-  {
-    path: '/sells',
-    name: 'sells',
-    component: () => import(/* webpackChunkName: "about" */ '../views/SellByDateView.vue')
   },
   {
     path: '/tables',

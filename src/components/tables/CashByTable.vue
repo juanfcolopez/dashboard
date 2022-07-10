@@ -6,9 +6,9 @@
     <div v-else>
     <div>
       <h1>Recaudado por mesas</h1>
-      <label for="example-datepicker">Fecha de Inicio</label>
+      <label for="datepicker-start-date-cash-tables">Fecha de Inicio</label>
       <b-form-datepicker id="start-cash-by-table" v-model="start" size="sm" class="sm"></b-form-datepicker>
-      <label for="example-datepicker">Fecha de Término</label>
+      <label for="datepicker-end-date-cash-tables">Fecha de Término</label>
       <b-form-datepicker id="end-cash-by-table" v-model="end" size="sm" class="sm"></b-form-datepicker>
       <b-button @click="getTopTables(start, end)"> Buscar </b-button>
     </div>
