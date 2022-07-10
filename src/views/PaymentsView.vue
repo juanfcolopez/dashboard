@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <h1>Métodos de pago</h1>
-     <label for="example-datepicker">Fecha de Inicio</label>
+     <label for="datepicker-start-date-payments">Fecha de Inicio</label>
       <b-form-datepicker id="payments-start" v-model="start" size="sm" class="sm"></b-form-datepicker>
-      <label for="example-datepicker">Fecha de Término</label>
+      <label for="datepicker-end-date-payments">Fecha de Término</label>
       <b-form-datepicker id="payments-end" v-model="end" size="sm" class="sm"></b-form-datepicker>
       <b-button @click="getPaymentsData(start, end)"> Buscar </b-button>
     <div>

@@ -9,9 +9,9 @@
         <b-form-select @change="getProducts($event, start, end)" v-model="selected" :options="options"></b-form-select>
       </div>
       <div v-if="selected">
-        <label for="example-datepicker">Fecha de Inicio</label>
+        <label for="datepicker-start-date-products">Fecha de Inicio</label>
         <b-form-datepicker id="products-start" v-model="start" size="sm" class="sm"></b-form-datepicker>
-        <label for="example-datepicker">Fecha de Término</label>
+        <label for="datepicker-end-date-products">Fecha de Término</label>
         <b-form-datepicker id="products-end" v-model="end" size="sm" class="sm"></b-form-datepicker>
         <b-button @click="getProducts(selected,start, end)"> Buscar </b-button>
         <h1> Productos Categoría {{selected}} </h1>

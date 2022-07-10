@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div>
-      <label for="example-datepicker">Fecha de Inicio</label>
-      <b-form-datepicker id="example-datepicker-start" v-model="start" size="sm" class="sm"></b-form-datepicker>
-      <label for="example-datepicker">Fecha de Término</label>
-      <b-form-datepicker id="example-datepicker-end" v-model="end" size="sm" class="sm"></b-form-datepicker>
+      <label for="datepicker-start-date-sells">Fecha de Inicio</label>
+      <b-form-datepicker id="datepicker-start-sells" v-model="start" size="sm" class="sm"></b-form-datepicker>
+      <label for="datepicker-end-date-sells">Fecha de Término</label>
+      <b-form-datepicker id="datepicker-end-sells" v-model="end" size="sm" class="sm"></b-form-datepicker>
       <b-button @click="getSellsByRange(start, end)"> Buscar </b-button>
     </div>
     <LineChartGenerator
