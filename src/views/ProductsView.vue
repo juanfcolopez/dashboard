@@ -6,9 +6,14 @@
     </div>
     <div v-else>
        <div>
-        <b-form-select @change="getProducts($event)" v-model="selected" :options="options"></b-form-select>
+        <b-form-select @change="getProducts($event, start, end)" v-model="selected" :options="options"></b-form-select>
       </div>
       <div v-if="selected">
+        <label for="example-datepicker">Fecha de Inicio</label>
+        <b-form-datepicker id="products-start" v-model="start" size="sm" class="sm"></b-form-datepicker>
+        <label for="example-datepicker">Fecha de Término</label>
+        <b-form-datepicker id="products-end" v-model="end" size="sm" class="sm"></b-form-datepicker>
+        <b-button @click="getProducts(selected,start, end)"> Buscar </b-button>
         <h1> Productos Categoría {{selected}} </h1>
         <TableProducts :items="items"/>
         <div v-if="this.quantity.length !== 0">
@@ -37,12 +42,14 @@ export default {
       labels: [],
       selected: null,
       options: [{ value: null, text: 'Seleccione una categoría' }],
-      items: []
+      items: [],
+      start: '2019-01-05',
+      end: '2019-01-15'
     }
   },
   methods: {
-    async getProducts (event) {
-      await fetch(`${process.env.VUE_APP_API_URL}/products/sells/${event}`)
+    async getProducts (event, start, end) {
+      await fetch(`${process.env.VUE_APP_API_URL}/products/sells/${event}/${start}/${end}`)
         .then((response) => response.json())
         .then((json) => {
           if (json.length !== 0) {
