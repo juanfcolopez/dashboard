@@ -13,6 +13,9 @@
 <script>
 export default {
   name: 'AmountChart',
+  props: {
+    items: []
+  },
   data () {
     return {
       loading: false,
@@ -26,17 +29,8 @@ export default {
           key: 'Cantidad ($)',
           sortable: true
         }
-      ],
-      items: []
+      ]
     }
-  },
-  async mounted () {
-    await fetch(`${process.env.VUE_APP_API_URL}/payments/amount`)
-      .then((response) => response.json())
-      .then((json) => {
-        this.items = [...json.data]
-      })
-      .catch((error) => console.log(error))
   }
 }
 </script>
