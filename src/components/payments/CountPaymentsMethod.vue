@@ -1,14 +1,13 @@
 <template>
-  <div>
-    <div v-if="this.loading">
+  <div class="home">
+    <div v-if="this.quantity.length === 0">
       Cargando...
     </div>
     <div v-else>
-      <h1>Medio de pago más común</h1>
-      <Pie
-        :chart-options="chartOptions"
-        :chart-data="chartData"
-      />
+     <Pie
+          :chart-options="chartOptions"
+          :chart-data="chartData"
+        />
     </div>
   </div>
 </template>
@@ -37,17 +36,18 @@ export default {
     datasetIdKey: {
       type: String,
       default: 'label'
-    }
+    },
+    labels: [],
+    quantity: []
   },
   data () {
     return {
-      loading: true,
       chartData: {
-        labels: [],
+        labels: this.labels,
         datasets: [
           {
             backgroundColor: ['#41B883', '#E46651', '#00D8FF'],
-            data: []
+            data: this.quantity
           }
         ]
       },
@@ -57,15 +57,9 @@ export default {
       }
     }
   },
-  async mounted () {
-    await fetch(`${process.env.VUE_APP_API_URL}/payments/count`)
-      .then((response) => response.json())
-      .then((json) => {
-        this.chartData.labels = [...json.data[0]]
-        this.chartData.datasets[0].data = [...json.data[1]]
-        this.loading = false
-      })
-      .catch((error) => console.log(error))
+  updated () {
+    this.chartData.labels = this.labels
+    this.chartData.datasets[0].data = this.quantity
   }
 }
 </script>
