@@ -23,6 +23,9 @@
         <li class="nav-item">
           <router-link to="/sells" class="nav-link">Ventas</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/tables" class="nav-link">Mesas</router-link>
+        </li>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
