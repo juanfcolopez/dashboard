@@ -6,10 +6,10 @@
     <div v-else>
     <div>
       <h1>Top Mesas Más utilizadas </h1>
-      <label for="example-datepicker">Fecha de Inicio</label>
-      <b-form-datepicker id="example-datepicker-start" v-model="start" size="sm" class="sm"></b-form-datepicker>
-      <label for="example-datepicker">Fecha de Término</label>
-      <b-form-datepicker id="example-datepicker-end" v-model="end" size="sm" class="sm"></b-form-datepicker>
+      <label for="datepicker-start-date-tables">Fecha de Inicio</label>
+      <b-form-datepicker id="datepicker-start-tables" v-model="start" size="sm" class="sm"></b-form-datepicker>
+      <label for="datepicker-end-date-tables">Fecha de Término</label>
+      <b-form-datepicker id="datepicker-end-tables" v-model="end" size="sm" class="sm"></b-form-datepicker>
       <div>
         <label for="TopTables">Las Top mesas más visitadas</label>
         <b-form-select v-model="selected" :options="options"></b-form-select>

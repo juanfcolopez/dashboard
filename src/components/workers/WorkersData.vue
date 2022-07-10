@@ -21,9 +21,9 @@
       <div size="sm" v-else-if="worker !== ''" class="mr-2">
         <b-button @click="backToTable()">Volver</b-button>
         <h1>Información de {{worker}}</h1>
-         <label for="example-datepicker">Fecha de Inicio</label>
+         <label for="datepicker-start-date-workers">Fecha de Inicio</label>
           <b-form-datepicker id="start-worker-table" v-model="start" size="sm" class="sm"></b-form-datepicker>
-          <label for="example-datepicker">Fecha de Término</label>
+          <label for="datepicker-end-date-workers">Fecha de Término</label>
           <b-form-datepicker id="end-worker-table" v-model="end" size="sm" class="sm"></b-form-datepicker>
           <b-button @click="getTablesInformation(worker, start, end)"> Buscar </b-button>
         <TableFrequency
