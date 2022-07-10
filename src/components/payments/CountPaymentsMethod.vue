@@ -4,6 +4,7 @@
       Cargando...
     </div>
     <div v-else>
+      <h1>Cantidad de transacciones por medio de pago</h1>
      <Pie
           :chart-options="chartOptions"
           :chart-data="chartData"
