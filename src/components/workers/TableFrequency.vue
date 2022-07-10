@@ -29,11 +29,11 @@ export default {
           sortable: true
         },
         {
-          key: 'Dinero Total',
+          key: 'Atenciones',
           sortable: true
         },
         {
-          key: 'Atenciones',
+          key: 'Total Recaudado',
           sortable: true
         }
       ]
